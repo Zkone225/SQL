@@ -59,11 +59,11 @@ create table commander
 (
 	id_commande int(5) auto_increment not null,
 	qtecde		int(5) not null,
-	id_factureCmd 	int(5) not null,
 	id_produitCmd	int(5) not null,
+	id_factureCmd 	int(5) not null,
 	primary key (id_commande),
-	foreign key (id_factureCmd) references facture(id_facture),
-	foreign key (id_produitCmd) references produit(id_produit)
+	foreign key (id_produitCmd) references produit(id_produit),
+	foreign key (id_factureCmd) references facture(id_facture)
 );
 
 insert into client (nom, prenom, adresse, tel) values 
