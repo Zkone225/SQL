@@ -251,7 +251,7 @@ where prixunit>( SELECT AVG(prixunit)from produit);
 
 select AVG(prixunit)from produit
 
-select designatio prixunit
+select designation, prixunit
 from produit 
 where prixunit<(select*
 from produit
